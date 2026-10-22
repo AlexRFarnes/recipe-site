@@ -57,6 +57,7 @@ Typography
   --s-600: 48px;
   --s-500: 40px;
   --s-400: 32px;
+  --s-350: 28px;
   --s-300: 24px;
   --s-200: 16px;
   --s-150: 12px;
@@ -157,13 +158,13 @@ a {
   display: flex;
   flex-direction: column;
   gap: var(--s-100);
+  padding-inline-start: var(--s-100);
 }
 
 .preparation-time__item {
   display: flex;
   align-items: center;
-  gap: var(--s-200);
-  padding-inline-start: var(--s-100);
+  gap: var(--s-350);
 }
 
 .preparation-time__item::before {
@@ -173,10 +174,9 @@ a {
   height: 4px;
   background-color: var(--color-stone-600);
   border-radius: 50%;
-  margin-inline-end: var(--s-200);
 }
 
-.preparaion-time__item-label {
+.preparation-time__item-label {
   font-weight: var(--font-weight-bold);
 }
 
