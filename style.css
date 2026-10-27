@@ -83,6 +83,7 @@ Typography
 
 body {
   color: var(--color-stone-600);
+  background-color: var(--color-stone-100);
   font-family: var(--font-family-body);
   font-size: var(--fs-16);
   line-height: 1.5;
@@ -91,6 +92,12 @@ body {
 
   display: grid;
   grid-template-rows: 1fr auto;
+}
+
+main {
+  width: min(100%, 736px);
+  background-color: var(--color-white);
+  margin-inline: auto;
 }
 
 img,
@@ -254,12 +261,64 @@ a {
   font-weight: var(--font-weight-bold);
 }
 
+/* Section Nutrition */
+.nutrition {
+  margin-block-end: var(--s-500);
+}
+
+.nutrition__table {
+  width: 100%;
+  text-align: left;
+}
+
+.nutrition__table-caption {
+  text-align: left;
+  margin-block-end: var(--s-300);
+}
+
+.nutrition__table-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-150);
+}
+
+.nutrition__table-row {
+  display: flex;
+  gap: var(--s-200);
+  padding-inline: var(--s-400);
+}
+
+.nutrition__table-row--border-bottom {
+  border-bottom: 1px solid var(--color-stone-150);
+  padding-block-end: var(--s-150);
+}
+
+.nutrition__table-header,
+.nutrition__table-cell {
+  flex: 1;
+}
+
+.nutrition__table-header {
+  font-weight: var(--font-weight-regular);
+}
+
+.nutrition__table-cell {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-brown-800);
+}
+
 /* Footer */
+
+.footer {
+  background-color: var(--color-white);
+}
 
 .attribution {
   font-size: 0.6875rem;
   text-align: center;
+  padding-block: var(--s-200);
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
