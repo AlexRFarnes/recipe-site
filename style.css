@@ -92,12 +92,27 @@ body {
 
   display: grid;
   grid-template-rows: 1fr auto;
+
+  @media (width >= 736px) {
+    padding-block-start: var(--s-1600);
+  }
 }
 
 main {
-  width: min(100%, 736px);
+  width: 100%;
   background-color: var(--color-white);
   margin-inline: auto;
+  padding-block-end: var(--s-500);
+
+  @media (width >= 736px) {
+    width: calc(616 / 16 * 1rem);
+    padding-block-start: var(--s-500);
+    border-radius: 24px;
+  }
+
+  @media (width >= 1200px) {
+    width: calc(736 / 16 * 1rem);
+  }
 }
 
 img,
@@ -128,14 +143,30 @@ a {
 }
 
 .wrapper {
-  width: min(calc(100% - var(--s-400) * 2), calc(736 / 16 * 1rem));
+  width: calc(100% - var(--s-400) * 2);
   margin-inline: auto;
+
+  @media (width >= 736px) {
+    width: calc(100% - var(--s-500) * 2);
+  }
 }
 
 .wrapper--background {
   background-color: var(--color-rose-50);
   padding: var(--s-300);
   border-radius: 12px;
+}
+
+.wrapper--image {
+  margin-block-end: var(--s-500);
+
+  @media (width >= 736px) {
+    width: calc(100% - var(--s-500) * 2);
+    height: calc(300 / 16 * 1rem);
+    margin-inline: auto;
+    border-radius: 12px;
+    overflow: hidden;
+  }
 }
 
 /******************
@@ -148,12 +179,18 @@ a {
 }
 
 .header__image {
-  margin-block-end: var(--s-500);
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .header__title {
   color: var(--color-stone-900);
   margin-block-end: var(--s-300);
+
+  @media (width >= 736px) {
+    font-size: var(--fs-40);
+  }
 }
 
 /* Section Preparation time */
@@ -189,7 +226,7 @@ a {
   display: inline-block;
   min-width: 4px;
   min-height: 4px;
-  background-color: var(--color-stone-600);
+  background-color: var(--color-rose-800);
   border-radius: 50%;
 }
 
@@ -262,9 +299,6 @@ a {
 }
 
 /* Section Nutrition */
-.nutrition {
-  margin-block-end: var(--s-500);
-}
 
 .nutrition__table {
   width: 100%;
@@ -309,14 +343,19 @@ a {
 
 /* Footer */
 
-.footer {
-  background-color: var(--color-white);
-}
-
 .attribution {
   font-size: 0.6875rem;
   text-align: center;
   padding-block: var(--s-200);
+  width: 100%;
+  margin-inline: auto;
+  background-color: var(--color-white);
+
+  @media (width >= 736px) {
+    background-color: transparent;
+    margin-block-start: var(--s-500);
+    font-size: 1rem;
+  }
 }
 
 .attribution a {
