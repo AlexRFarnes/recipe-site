@@ -130,6 +130,7 @@ h4 {
   line-height: 1;
   font-family: var(--font-family-header);
   letter-spacing: 0px;
+  font-weight: var(--font-weight-bold);
 }
 
 h2 {
