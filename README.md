@@ -22,6 +22,8 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 
 ## Overview
 
+The page presents a simple omelette recipe. The header contains the photo, an `h1`, and a short description. Below that, four sections use `h2` headings: preparation time and ingredients are unordered lists, the instructions are an ordered list, and nutrition is a table. The nutrient names are row headers, and the sentence above the values is the table caption.
+
 ### Screenshot
 
 #### Mobile
